@@ -8,13 +8,7 @@ import seaborn as sns
 
 df= pd.read_csv('HR_Analytics.csv')
 
-# # Display the shape of the DataFrame
-# print(df.shape)
-# # Display the column names
-# print("column names : ", df.columns)
-# # Display the data types of each column
-# print(df.dtypes)
-# Display the summary statistics of the DataFrame
+#double check the cleaned data csv file 
 print("summary statistics : ")
 print(df.describe())
 # Display the number of missing values in each column
@@ -32,3 +26,6 @@ duplicates = df[df.duplicated(subset='EmpID', keep=False)]
 print(duplicates.sort_values('EmpID'))
 
 print("Number of completely duplicated rows:", df.duplicated().sum())
+
+print("Summary statistics for Age:")
+print(df['Age'].describe())

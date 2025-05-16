@@ -13,18 +13,22 @@ df['YearsWithCurrManager'].fillna(-1, inplace=True)
 
 #check for duplictes in the employee id column
 duplicates = df.duplicated(subset=['EmpID'])
-duplicate_employee_count = df.duplicated(subset=["EmployeeCount"])
+print("number of duplicates in df:", duplicates.sum())
 #drop employee count column as it is not useful for analysis as it is constant value
 if df['EmployeeCount'].nunique() == 1:
     df.drop(columns=['EmployeeCount'], inplace=True)
+
+df.drop(columns=['Over18'], inplace=True)
 #drop duplicate rows as there are duplicates because of empID is not all unique 
 #keep the first occurrence of each duplicate
 # df.drop_duplicates(subset=['EmpID'], keep='first', inplace=True)
 
 
-
 dupes = df[df.duplicated(subset='EmpID', keep=False)]
-#drop fully duplicated rows
-# dupes.drop_duplicates(subset='EmpID', keep='first', inplace=True)
-
 dupes.to_csv("potential_conflicts.csv", index=False)
+
+#drop fully duplicated rows
+df.drop_duplicates(subset='EmpID', keep='first', inplace=True)
+df.to_csv("cleaned_data.csv", index=False)
+
+
