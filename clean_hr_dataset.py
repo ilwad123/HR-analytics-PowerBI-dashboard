@@ -19,15 +19,15 @@ if df['EmployeeCount'].nunique() == 1:
     df.drop(columns=['EmployeeCount'], inplace=True)
 
 df.drop(columns=['Over18'], inplace=True)
-#drop duplicate rows as there are duplicates because of empID is not all unique 
-#keep the first occurrence of each duplicate
+
 # df.drop_duplicates(subset=['EmpID'], keep='first', inplace=True)
 
-
+#get the number of duplicates in empID as they are not all unique 
 dupes = df[df.duplicated(subset='EmpID', keep=False)]
 dupes.to_csv("potential_conflicts.csv", index=False)
 
-#drop fully duplicated rows
+#drop duplicate rows as there are duplicates because of empID is not all unique 
+#keep the first occurrence of each duplicate
 df.drop_duplicates(subset='EmpID', keep='first', inplace=True)
 df.to_csv("cleaned_data.csv", index=False)
 
