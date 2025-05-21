@@ -14,7 +14,7 @@ There are key objectives for the HR team that needs to be met :
 
 ## Dashboard Preview
 
-![HR Dashboard Screenshot](images/dashboard_preview.png) 
+![HR Dashboard Screenshot](dashboard_preview.png) 
 ---
 ## Dashboard insights:
 Based on the departments-level insights demographic, and behavioral analysis , these key insights are found : 
