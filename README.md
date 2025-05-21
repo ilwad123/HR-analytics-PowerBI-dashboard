@@ -44,7 +44,7 @@ Based on the department-level insights, demographic, and behavioural analysis, t
 ---
 
 ## 🛠️ Tools Used
-- **Python**: Data cleaning with `pandas`, `numpy`, `matplotlib`
+- **Python**: Data cleaning with `pandas`, `numpy`
 - **Power BI**: Dashboard development and visualization
 - **CSV**: For importing/exporting cleaned datasets
 
