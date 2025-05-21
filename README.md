@@ -4,8 +4,9 @@
 This project presents an HR analytics dashboard created using **Power BI**, with all data pre-processed and cleaned in **Python**. The goal is to uncover key HR insights related to attrition, compensation, work satisfaction, and employee demographics.
 
 > Dataset from Kaggle 
+---
+There are key objectives for the HR team that need to be met :
 
-There are key objectives for the HR team that needs to be met :
 - Identify **potential drivers of attrition**
 - Understand how **demographics and job roles** affect satisfaction and turnover
 - Ensure performance is kept up
@@ -17,14 +18,15 @@ There are key objectives for the HR team that needs to be met :
 ![HR Dashboard Screenshot](dashboard_preview.png) 
 ---
 ## Dashboard insights:
-Based on the departments-level insights demographic, and behavioral analysis , these key insights are found : 
--Employees doing overtime are nearly 3× more likely to leave, with the highest overtime attrition impact seen in Research & Development (3.2×).
--Overtime is most common in Sales (28.7%), further amplifying its attrition risk. 
--Attrition is highest among employees aged 26–35, especially in specific roles.
--Research & Development reports higher job satisfaction  and lower attrition rates.
--Monthly income increases with job level, confirming role-based compensation fairness.
--Overall environment satisfaction averages below the target score of 3.0, highlighting a potential area for improvement.
--HR shows the lowest job satisfaction (2.60), indicating a potential engagement gap for further investigation.
+Based on the department-level insights, demographic, and behavioural analysis, these key insights are found : 
+
+- Employees doing overtime are nearly 3× more likely to leave, with the highest overtime attrition impact seen in Research & Development (3.2×).
+- Overtime is most common in Sales (28.7%), further amplifying its attrition risk. 
+- Attrition is highest among employees aged 26–35, especially in specific roles.
+- Research & Development reports higher job satisfaction  and lower attrition rates.
+- Monthly income increases with job level, confirming role-based compensation fairness.
+- Overall environment satisfaction averages below the target score of 3.0, highlighting a potential area for improvement.
+- HR shows the lowest job satisfaction (2.60), indicating a potential engagement gap for further investigation.
 -Male employees in the 26–45 age range drive the majority of attrition across the company, with early-career exits also high across both genders
 
 ---
@@ -33,7 +35,7 @@ Based on the departments-level insights demographic, and behavioral analysis , t
 - **Source**: Provided CSV file (`HR_Analytics.csv`)
 - **Rows**: 1,470 employees
 - **Columns**: 38 columns covering:
-  - Demographics: `Age`, `Gender`, `MaritalStatus`, `AgeGroup` yes 
+  - Demographics: `Age`, `Gender`, `MaritalStatus`, `AgeGroup`  
   - Compensation: `MonthlyIncome`, `HourlyRate`, `DailyRate`, `SalarySlab`
   - Satisfaction: `JobSatisfaction`, `EnvironmentSatisfaction`, `WorkLifeBalance`, etc.
   - Tenure and experience: `YearsAtCompany`, `YearsWithCurrManager`, `TotalWorkingYears`
@@ -85,7 +87,7 @@ Post-cleaning checks confirmed:
   - Donut Chart: Employee attrition status (Yes/No)
   - Bar Chart: Average Monthly Income by Job Level
   - Stacked Column Chart: Attrition count by Age Group and Gender
-  - Bar Chart: Total Employees by Overtime status and Attrition
+  - Bar Chart: Total Employees by Overtime Status and Attrition
   - Gauge Chart: Average Environment Satisfaction (scale 1–4) with target value (3)
  
 - **Interactive Slicers (affects the whole board) **:
