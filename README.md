@@ -3,13 +3,37 @@
 ## Overview
 This project presents an HR analytics dashboard created using **Power BI**, with all data pre-processed and cleaned in **Python**. The goal is to uncover key HR insights related to attrition, compensation, work satisfaction, and employee demographics.
 
+> Dataset from Kaggle 
+
+There are key objectives for the HR team that needs to be met :
+- Identify **potential drivers of attrition**
+- Understand how **demographics and job roles** affect satisfaction and turnover
+- Ensure performance is kept up
+- Evaluate **compensation fairness** across job levels
+- Empower decision-making through an interactive, data-driven report
+
+## Dashboard Preview
+
+![HR Dashboard Screenshot](images/dashboard_preview.png) 
+---
+## Dashboard insights:
+Based on the departments-level insights demographic, and behavioral analysis , these key insights are found : 
+-Employees doing overtime are nearly 3× more likely to leave, with the highest overtime attrition impact seen in Research & Development (3.2×).
+-Overtime is most common in Sales (28.7%), further amplifying its attrition risk. 
+-Attrition is highest among employees aged 26–35, especially in specific roles.
+-Research & Development reports higher job satisfaction  and lower attrition rates.
+-Monthly income increases with job level, confirming role-based compensation fairness.
+-Overall environment satisfaction averages below the target score of 3.0, highlighting a potential area for improvement.
+-HR shows the lowest job satisfaction (2.60), indicating a potential engagement gap for further investigation.
+-Male employees in the 26–45 age range drive the majority of attrition across the company, with early-career exits also high across both genders
+
 ---
 
 ## 🗃️ Dataset Summary
 - **Source**: Provided CSV file (`HR_Analytics.csv`)
 - **Rows**: 1,470 employees
 - **Columns**: 38 columns covering:
-  - Demographics: `Age`, `Gender`, `MaritalStatus`, `AgeGroup`
+  - Demographics: `Age`, `Gender`, `MaritalStatus`, `AgeGroup` yes 
   - Compensation: `MonthlyIncome`, `HourlyRate`, `DailyRate`, `SalarySlab`
   - Satisfaction: `JobSatisfaction`, `EnvironmentSatisfaction`, `WorkLifeBalance`, etc.
   - Tenure and experience: `YearsAtCompany`, `YearsWithCurrManager`, `TotalWorkingYears`
@@ -51,14 +75,25 @@ Post-cleaning checks confirmed:
 
 ## 📈 Power BI Dashboard Features
 - **KPI Cards**: 
-  - Total Employees
-  - Average Monthly Income
+  - Total Active Employees
+  - Average Job Satisfaction
+  - Overtime Rate
   - Attrition Rate
+  - Insight Card: Dynamic insight (e.g., “Employees doing overtime have 2.9× higher attrition rate”)
+
 - **Visuals**:
-  - Bar Chart: Monthly Income by Job Role
-  - Pie Chart: Attrition distribution
-  - Slicers: Gender, Department, Attrition, Age Group
-  - Heatmap: Satisfaction levels across departments
+  - Donut Chart: Employee attrition status (Yes/No)
+  - Bar Chart: Average Monthly Income by Job Level
+  - Stacked Column Chart: Attrition count by Age Group and Gender
+  - Bar Chart: Total Employees by Overtime status and Attrition
+  - Gauge Chart: Average Environment Satisfaction (scale 1–4) with target value (3)
+ 
+- **Interactive Slicers (affects the whole board) **:
+   - Hierarchical Slicer: Department → Job Role
+   - Job Level 
+   - Age group
+   - Gender
+
 
 ---
 
@@ -71,10 +106,9 @@ Post-cleaning checks confirmed:
 | `validate_cleaned_data.py` | Script to validate final cleaned dataset |
 | `cleaned_data.csv` | Final dataset ready for Power BI |
 | `potential_conflicts.csv` | Saved duplicate `EmpID` records before resolution |
-| `hr_dashboard.pbix` | Power BI dashboard (if included) |
+| `hr_dashboard.pbix` | Power BI dashboard  |
 
 ---
 
 
-l
 ---
